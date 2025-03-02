@@ -1,7 +1,7 @@
 import numpy as np
 from agent import Agent
 
-class RandomPlayer(Agent):
+class CustomPlayer(Agent):
     def __init__(self, size, player_number, adv_number):
         super().__init__(size, player_number, adv_number)
         self.name = "Random"
