@@ -135,5 +135,3 @@ This will run 25 games with randomized player assignments and provide detailed p
 
 **For issues in the code, kindly raise a PR request.**
 
-POC: Samyak 9890822695
-
