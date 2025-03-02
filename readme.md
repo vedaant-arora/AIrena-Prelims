@@ -85,8 +85,7 @@ Your agent will inherit from the `Agent` base class, which provides the followin
 - `free_moves()`: Gets all available moves
 
 ### Example Implementation
-
-Here's the placeholder agent provided in `agent1.py`:
+Here's the placeholder agent provided in [`agent1.py`](agent1.py):
 
 ```python
 import numpy as np
