@@ -15,7 +15,7 @@ def str2bool(v):
         raise argparse.ArgumentTypeError('Boolean value expected.')
 
 def main():
-    parser = argparse.ArgumentParser(description="Hexwar Game")
+    parser = argparse.ArgumentParser(description="AI-Rena Game")
     parser.add_argument("--gui", type=str2bool, default=True, help="Enable GUI (true/false)")
     parser.add_argument("--players", nargs=2, choices=["random", "minimax"], required=True, help="Player types")
     parser.add_argument("--size", type=int, default=9, help="Grid size")

@@ -9,8 +9,10 @@ class RandomPlayer(Agent):
 
     def step(self):
         move = self._possible_moves.pop(np.random.randint(len(self._possible_moves)))
+        self.set_hex(self.player_number, move)
         return move
 
     def update(self, move_other_player):
+        self.set_hex(self.adv_number, move_other_player)
         if move_other_player in self._possible_moves:
             self._possible_moves.remove(move_other_player)
