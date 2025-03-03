@@ -60,7 +60,7 @@ class GUI:
         p1_color_box.pack(side=tk.LEFT, padx=(0, 5))
         tk.Label(p1_frame, text="Player 1", fg=self._p1_color, bg=self._bg_color, 
                 font=('Helvetica', 12, 'bold')).pack(side=tk.LEFT)
-        tk.Label(p1_frame, text="(top-bottom)", fg='#ECF0F1', bg=self._bg_color, 
+        tk.Label(p1_frame, text="(Left-Right)", fg='#ECF0F1', bg=self._bg_color, 
                 font=('Helvetica', 10)).pack(side=tk.LEFT, padx=(5, 0))
         
         p2_frame = tk.Frame(self._info_frame, bg=self._bg_color)
@@ -70,7 +70,7 @@ class GUI:
         p2_color_box.pack(side=tk.LEFT, padx=(0, 5))
         tk.Label(p2_frame, text="Player 2", fg=self._p2_color, bg=self._bg_color, 
                 font=('Helvetica', 12, 'bold')).pack(side=tk.LEFT)
-        tk.Label(p2_frame, text="(left-right)", fg='#ECF0F1', bg=self._bg_color, 
+        tk.Label(p2_frame, text="(Top-Bottom)", fg='#ECF0F1', bg=self._bg_color, 
                 font=('Helvetica', 10)).pack(side=tk.LEFT, padx=(5, 0))
         
         # Turn and winner indicator
