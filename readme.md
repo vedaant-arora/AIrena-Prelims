@@ -62,7 +62,7 @@ To create a custom agent, you'll need to modify the `agent1.py` file. The file c
 ### Guidelines:
 1. Your agent must make moves within 2 seconds
 2. You can import any library listed in [allowed_libraries.md](allowed_libraries.md)
-3. From this codebase, you may only import from the `grid` module
+3. From this codebase, you may only import from the `Agent` module
 
 ### Agent Base Class
 
