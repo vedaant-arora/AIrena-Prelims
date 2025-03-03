@@ -33,6 +33,7 @@ The following Python libraries are allowed for developing your AI agent:
 - tensorflow
 
 ## Restrictions
+- No GPU or CUDA libraries are allowed
 - No file IO operations beyond loading/saving your agent's state
 - No multi-threading or multi-processing
 - No network connections

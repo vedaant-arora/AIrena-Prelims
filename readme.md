@@ -60,7 +60,7 @@ python main.py --eval
 To create a custom agent, you'll need to modify the `agent1.py` file. The file contains a `CustomPlayer` class that you should implement with your own strategy.
 
 ### Guidelines:
-1. Your agent must make moves within 2 seconds
+1. Your agent must be capable of competing on a 21 x 21 board, with the total time for all moves not exceeding 1 minute.
 2. You can import any library listed in [allowed_libraries.md](allowed_libraries.md)
 3. From this codebase, you may only import from the `Agent` module
 
@@ -129,6 +129,10 @@ python main.py --eval
 ```
 
 This will run 25 games with randomized player assignments and provide detailed performance statistics 
+
+## Evaluation Details
+
+Your agent will be tested in a ubuntu 22.04 environment with 8GB RAM. Ensure that it is supported in such a environment.
 
 ## Contact
 
