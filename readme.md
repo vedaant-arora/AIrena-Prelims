@@ -136,5 +136,5 @@ Your agent will be tested in a ubuntu 22.04 environment with 8GB RAM. Ensure tha
 
 ## Contact
 
-**For issues in the code, kindly raise a PR request.**
+**For issues in the code, kindly raise a Issue.**
 
