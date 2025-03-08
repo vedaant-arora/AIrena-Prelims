@@ -14,7 +14,7 @@ class MinimaxPlayer(Agent):
         for move in self.free_moves():
             new_node = self.copy()
             new_node.set_hex(self.player_number, move)
-            value = self.alphaBeta(new_node, 2, alpha, np.inf, self.adv_number)
+            value = self.alphaBeta(new_node, 1, alpha, np.inf, self.adv_number)
             if value > best:
                 best = value
                 best_move = move
