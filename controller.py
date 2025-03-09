@@ -11,8 +11,9 @@ class Controller:
 
         # If no time_limit is specified or no player is designated as "custom", do not enforce timing
         self._custom_player_number = custom_player_number
-        self._time_limit = time_limit if time_limit is not None else float('inf')
-        self._custom_time_used = 0.0  # tracks the custom agent's total time
+        self._time_limit = time_limit if time_limit is not None else 92.0
+        self.custom_time_used_for1 = 0.0  # tracks the custom agent's total time
+        self.custom_time_used_for2 = 0.0  # tracks the custom agent's total time
 
     def update(self):
         start_time = time.time()
@@ -30,16 +31,21 @@ class Controller:
 
         # Measure time for whichever player is the designated custom player
         step_time = time.time() - start_time
-        if self._current_player == 2 and self._custom_player_number == 1:
-            # That means player1 just moved
-            self._custom_time_used += step_time
-        elif self._current_player == 1 and self._custom_player_number == 2:
-            # That means player2 just moved
-            self._custom_time_used += step_time
+        if self._current_player == 1:
+            self.custom_time_used_for2 += step_time
+        elif self._current_player == 2:
+            self.custom_time_used_for1 += step_time
+        # print("Step time:")
+        # print(step_time)
+        # print("Custom time used:")
+        # print(self.custom_time_used_for1, self.custom_time_used_for2)
 
         # If custom agent exceeds time_limit, stop and declare the other player as winner
-        if self._custom_time_used > self._time_limit:
-            self._winner = 1 if self._custom_player_number == 2 else 2
+        if self._current_player == 1 and self.custom_time_used_for1 > self._time_limit:
+            self._winner = 2
+            return
+        elif self._current_player == 2 and self.custom_time_used_for2 > self._time_limit:
+            self._winner = 1
             return
 
         self._check_win()
