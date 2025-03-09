@@ -34,7 +34,7 @@ class Grid:
             axis = 1
 
         for s in start:
-            if self.get_hex(s):
+            if self.get_hex(s)==player:
                 if self._dfs(s, player, end, axis, set()):
                     return True
         return False
