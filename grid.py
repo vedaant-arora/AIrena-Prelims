@@ -25,17 +25,16 @@ class Grid:
 
     def check_win(self, player):
         if player == 1:
-            start = [[0, y] for y in range(self._size)]
+            start = [[0, y] for y in range(self._size) if self.get_hex([0, y]) == player]
             end = self._size - 1
             axis = 0
         else:
-            start = [[x, 0] for x in range(self._size)]
+            start = [[x, 0] for x in range(self._size) if self.get_hex([x,0]) == player ]
             end = self._size - 1
             axis = 1
 
         for s in start:
-            if self.get_hex(s)==player:
-                if self._dfs(s, player, end, axis, set()):
+            if self._dfs(s, player, end, axis, set()):
                     return True
         return False
 
